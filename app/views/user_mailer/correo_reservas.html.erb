@@ -1,0 +1,39 @@
+<h2>SOLICITUD DE RESERVA</h2>
+<br>
+<table border="1" cellspacing="0" width="50%">
+	<tr>
+		<td width="30%"><strong>Nombre:</strong></td>
+ 		<td width="70%"><%= @datosReserva[:Nombre] %></td>
+	</tr>
+	<tr>
+		<td><strong>Correo</strong></td>
+		<td><%= @datosReserva[:Correo] %></td>
+	</tr>
+		<td><strong>Telefono</strong></td>
+		<td><%= @datosReserva[:Telefono] %></td>
+	</tr>
+	<tr>
+		<td><strong>Niños</strong></td>
+		<td><%= @datosReserva[:NroNinos] %></td>
+	</tr>
+	<tr>
+		<td><strong>Adultos</strong></td>
+		<td><%= @datosReserva[:NroAdultos] %></td>
+	</tr>
+	<tr>
+		<td><strong>Fecha de Ingreso</strong></td>
+		<td><%= @datosReserva[:FechaIngreso] %></td>
+	</tr>
+	<tr>
+		<td><strong>Fecha de Salida</strong></td>
+		<td><%= @datosReserva[:FechaSalida] %></td>
+	</tr>
+	<tr>
+		<td><strong>Tipo Habitacion</strong></td>
+		<td><%= @datosReserva[:TipoHabitacion] %></td>
+	</tr>	
+	<tr>
+		<td><strong>Observación</strong></td>
+		<td><%= @datosReserva[:Observacion] %></td>
+	</tr>
+</table>

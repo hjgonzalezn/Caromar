@@ -1,0 +1,442 @@
+<script>
+	$(document).ready(function(){
+		$(".modalContent_2Columns_right").hide(1000);
+		$("#div_utria").show(0);
+		$("#div_festival").show(0);
+		$(".side-nav-button").click(function(){
+			varDiv = "#" + $(this).attr("id").replace("btn", "div");
+			$(".modalContent_2Columns_right").hide(1000);
+			$(varDiv).show(1000);
+		});
+	});
+</script>
+<div class="section" style="width:95.7%">
+<h1>Bahía Solano</h1>
+<br>
+
+<br>
+<p>En el Hotel Carolina Del Mar te damos razones para conocer este mágico rincón del Pacífico colombiano:</p>
+
+	<div class="feature">
+		<div class="camera_wrap camera_charcoal_skin" id="camera_wrap">
+            <div data-thumb="/assets/slideshow/bhsolano/thumbs/1.jpg" data-src="/assets/slideshow/bhsolano/slide1.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    1.) Hermosos atardeceres. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+            <div data-thumb="/assets/slideshow/bhsolano/thumbs/2.jpg" data-src="/assets/slideshow/bhsolano/slide2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    2.) Su mar de colores, con tonos que van del verde esmeralda al azul turquesa. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+            <div data-thumb="/assets/slideshow/bhsolano/thumbs/3.jpg" data-src="/assets/slideshow/bhsolano/slide3.jpg">
+                <div class="camera_caption fadeFromBottom">
+                	3.) Apreciar su biodiversidad. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/bhsolano/thumbs/4.jpg" data-src="/assets/slideshow/bhsolano/slide4.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    4.) Disfrutar sus fuentes de agua cristalina. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/bhsolano/thumbs/5.jpg" data-src="/assets/slideshow/bhsolano/slide5.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    5.) Por brindar descanso y relajación. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.                    
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/bhsolano/thumbs/6.jpg" data-src="/assets/slideshow/bhsolano/slide6.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    6.) Deportes y actividades acuáticas. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.                    
+                </div>
+            </div>
+        </div>
+      </div>
+	<div style="clear:both; display:block; height:25px"></div>
+			<div class="subsection">
+		<br>
+		<h2>Cómo llegar</h2>
+		<div class="one-half" style="padding: 0 10px 0 10px">
+			<p>A Bahía Solano es posible llegar por vía aérea desde Medellín y Quibdó. Con el fin de hacer más simple tu viaje, nuestra agencia asociada <a href="http:/www.naisatours.co">Naisa Tours S.A.S</a>
+			   ofrece vuelos chárter desde y hacia Bahía Solano.
+			</p>
+			<p> También prestan sus servicios las aerolíneas <a href="http://www.ada-aero.com" target="_blank">ADA</a>, <a href="http://www.taccolombia.com/" target="_blank">TAC</a> y  
+				<a href="http://www.satena.com" target="_blank">Satena</a>, esta última también ofrece vuelos desde Bogotá con conexión en Medellín.
+			</p>
+			<p>Como alternativa, existe el servicio de transporte por vía marítima desde Buenaventura (Valle Del Cauca).</p>
+		</div>
+		<div class="one-third-big last" style="background-color: #F0F0F0; padding:10px; width:340px; margin:20px 0 0 40px; box-shadow: inset 0 0 7px 0px #1772b5; border-radius: 5px;">
+			<a href="http://www.naisatours.com" target="_blank"><img src="/assets/pagina/logo-naisa.png" /></a>
+			<table width="100%" style="font-size: 1.2rem;">
+				<tr>
+					<td>Teléfonos</td>
+					<td>+57 (314) 866 2358<br>
+						<!--+57 (301) 385 3421<br-->
+						+57 (310) 517 9347<br>
+						+57 (310) 524 8757
+					</td>
+				</tr>
+				<tr>
+					<td>E-Mail</td>
+					<td><a href="mailto:info@naisatours.com">info@naisatours.com</a>
+					</td>
+				</tr>
+				<tr>
+					<td>Más info.</td>
+					<td><a href="http://www.naisatours.com" target="_blank">Naisatours.com</a>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<br>
+   		<div class="subsection">
+		<br>
+		<h2>Lugares que debes visitar</h2>
+		<div class="one-half" style="background-color: none; border-radius: 10px; padding:10px;margin-right: 0px;">
+			<p>Bah&iacute;a Solano cuenta con lugares increíbles que puedes visitar cada día. Con actividades como
+				el senderismo, canotaje, pesca deportiva. A continuación te presentamos una lista de los más conocidos, mas no los únicos con que cuenta esta hermosa tierra.
+				<a href="#ModalLugaresInteres">Ver más &raquo;</a>
+			</p>
+		</div>
+		<div class="one-third-big last">
+			<div class="polaroid-fixed">
+				<img src="/assets/lugares/lugares-mini.jpg" alt="" title="" />
+				<br>
+				<h2>Bahía Solano</h2>
+				<p><a href="#ModalLugaresInteres">Lugares de interés</a></p>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="subsection">
+		<br>
+		<h2>Fechas y eventos importantes</h2>
+		<div class="one-half" style="background-color: none; border-radius: 10px; padding:10px;margin-right: 0px;">
+			<p>A continuación te presentamos una lista de eventos que tienen lugar en Bahía Solano y que pueden ser de tu interés. Eventos tales como
+				el avistamiento de ballenas yubarta, el desove y liberación de tortugas verde y golfina, el Festival De la Bahía, entre otros. 
+				<a href="#ModalEventos">Ver más &raquo;</a>
+			</p>
+		</div>
+		<div class="one-third-big last">
+			<div class="polaroid-fixed">
+				<img src="/assets/eventos/eventos-mini.jpg" alt="" title="" />
+				<br>
+				<h2>Bahía Solano</h2>
+				<p><a href="#ModalEventos">Eventos importantes</a></p>		
+			</div>
+		</div>
+	</div>
+		
+	
+</div> <!-- Content  -->
+        
+		<div style="clear:both; display:block; height:10px"></div>
+	
+<div id="ModalLugaresInteres" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<div id="div_lugares_interes" class="modalTab">
+			<div class="tab_content_info">
+				<div class="side-nav-popup">
+					<h3 class="glossy-title">Lugares de interés</h3>
+					<input type="button" class="side-nav-button" value="La ensenada de Utría" id="btn_utria" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Mirador loma de la virgen" id="btn_lavirgen" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Salto de Chocolatal" id="btn_chocolatal" style="text-align:left; width: 99%;"/>
+					<!--input type="button" class="side-nav-button" value="Salto del Aeropuerto" id="btn_aeropuerto" style="text-align:left; width: 99%;"/-->
+					<input type="button" class="side-nav-button" value="Corregimiento El Valle" id="btn_elvalle" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Punta Huina" id="btn_huina" style="text-align:left; width: 99%;"/>
+					<!--input type="button" class="side-nav-button" value="Mecana" id="btn_mecana" style="text-align:left; width: 99%;"/-->
+					<input type="button" class="side-nav-button" value="Morros Nidales" id="btn_nidales" style="text-align:left; width: 99%;"/>
+				</div>
+				<em class="corner"></em>
+			</div>
+			<div id="div_utria" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">La Ensenada de Utría</h4>
+				<p>Parque Nacional Natural de Utría.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch1" id="id11" checked="checked"/>
+					<label for="id11">
+						<img src="/assets/lugares/utria.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/utria.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_lavirgen" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Mirador de la virgen</h4>
+				<p>Aprecie la vista panorámica de Ciudad Mutis y la Bahía.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch2" id="id21" checked="checked"/>
+					<label for="id21">
+						<img src="/assets/lugares/lavirgen1.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/lavirgen1.jpg" width="540"/>
+					<input type="radio" name="slide_switch2" id="id22"/>
+					<label for="id22">
+						<img src="/assets/lugares/lavirgen2.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/lavirgen2.jpg" width="540"/>
+					<input type="radio" name="slide_switch2" id="id23"/>
+					<label for="id23">
+						<img src="/assets/lugares/lavirgen3.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/lavirgen3.jpg" width="540"/>
+					<input type="radio" name="slide_switch2" id="id24"/>
+					<label for="id24">
+						<img src="/assets/lugares/lavirgen4.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/lavirgen4.jpg" width="540"/>
+					<input type="radio" name="slide_switch2" id="id25"/>
+					<label for="id25">
+						<img src="/assets/lugares/lavirgen5.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/lavirgen5.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_chocolatal" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Quebrada Chocolatal</h4>
+				<p>Hilo de aguas cristalinas que recorre Ciudad Mutis, escenario ideal para senderismo ecológico en un recorrido de 15 minutos hasta llegar al
+				   Salto.  
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch3" id="id31" checked="checked"/>
+					<label for="id31">
+						<img src="/assets/lugares/chocolatal1.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/chocolatal1.jpg" width="540"/>
+					<input type="radio" name="slide_switch3" id="id32"/>
+					<label for="id32">
+						<img src="/assets/lugares/chocolatal2.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/chocolatal2.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_aeropuerto" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Salto Del Aeropuerto</h4>
+				<p>Aprecie la vista panorámica que se tiene de Ciudad Mutis y la Bahía.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch4" id="id41" checked="checked"/>
+					<label for="id41">
+						<img src="/assets/lugares/utria.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/utria.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_elvalle" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Corregimiento El Valle</h4>
+				<p>Destino turístico por excelencia de Bahía Solano, el de mayor demanda por sus playas, olas para surfing y reservas naturales, entre otros.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch5" id="id51" checked="checked"/>
+					<label for="id51">
+						<img src="/assets/lugares/valle1.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/valle1.jpg" width="540"/>
+					<input type="radio" name="slide_switch5" id="id52"/>
+					<label for="id52">
+						<img src="/assets/lugares/valle2.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/valle2.jpg" width="540"/>
+					<input type="radio" name="slide_switch5" id="id53"/>
+					<label for="id53">
+						<img src="/assets/lugares/valle3.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/valle3.jpg" width="540"/>
+					<input type="radio" name="slide_switch5" id="id54"/>
+					<label for="id54">
+						<img src="/assets/lugares/valle4.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/valle4.jpg" width="540"/>
+					<input type="radio" name="slide_switch5" id="id55"/>
+					<label for="id55">
+						<img src="/assets/lugares/valle5.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/valle5.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_huina" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Punta Huina</h4>
+				<p>Playa muy apreciada por los turistas por su mar de aguas tranquilas, aquí se practican 
+				   deportes acuáticos como el esquí y buceo con snorkel. </p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch6" id="id61" checked="checked"/>
+					<label for="id61">
+						<img src="/assets/lugares/huina1.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/huina1.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_mecana" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Corregimiento de Mecana</h4>
+				<p>Pequeño caserío a 5 km de Ciudad Mutis, con hermosas playas y un río ideal para practicar canotaje.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch7" id="id71" checked="checked"/>
+					<label for="id71">
+						<img src="/assets/lugares/utria.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/utria.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_nidales" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Morros Nidales</h4>
+				<p>Lugar recomendado para práctica de pesca deportiva y buceo scuba.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch8" id="id81" checked="checked"/>
+					<label for="id81">
+						<img src="/assets/lugares/nidales1.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/nidales1.jpg" width="540"/>
+					<input type="radio" name="slide_switch8" id="id82"/>
+					<label for="id82">
+						<img src="/assets/lugares/nidales2.jpg" width="90"/>
+					</label>
+					<img src="/assets/lugares/nidales2.jpg" width="540"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div id="ModalEventos" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<div style="float:right; background-color:white; overflow:auto; margin: 0 11px 2px 0;"></div>
+		<div id="div_eventos_especiales" class="modalTab">
+			<div class="tab_content_info">
+				<div class="side-nav-popup">
+					<h3 class="glossy-title">Eventos importantes</h3>
+					<input type="button" class="side-nav-button" value="Festival de la Bahía" id="btn_festival" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Fiestas Virgen del Carmen" id="btn_carmen" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Desove de tortugas Golfina" id="btn_desove" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Avistamiento de ballenas" id="btn_ballenas" style="text-align:left; width: 99%;"/>
+					<input type="button" class="side-nav-button" value="Liberación Tortugas Golfina" id="btn_libera" style="text-align:left; width: 99%;"/>		
+				</div>
+				<em class="corner"></em>
+			</div>
+			<div id="div_festival" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Festival de la Bahía</h4>
+				<p>1 al 7 de agosto. Las fiestas de mayor reconocimiento en el Municipio de Bahía Solano. Reinas, comparsas, balleneras y mucho más para ver.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch100" id="id101" checked="checked"/>
+					<label for="id101">
+						<img src="/assets/eventos/festival1.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/festival1.jpg" width="540"/>
+					<input type="radio" name="slide_switch100" id="id102"/>
+					<label for="id102">
+						<img src="/assets/eventos/festival2.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/festival2.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_carmen" class="modalContent_2Columns_right">
+				
+				<h4 class="glossy-title dark-blue">Fiestas de la Virgen Del Carmen</h4>
+				<p>16 de julio. Contágiate con la alegría del pueblo valluno en esta fiesta religiosa.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch110" id="id111" checked="checked"/>
+					<label for="id111">
+						<img src="/assets/eventos/carmen1.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/carmen1.jpg" width="540"/>
+					<input type="radio" name="slide_switch110" id="id112"/>
+					<label for="id112">
+						<img src="/assets/eventos/carmen2.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/carmen2.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_desove" class="modalContent_2Columns_right">
+				<h4 class="glossy-title dark-blue">Desove Tortugas Golfina</h4>
+				<p>Julio a Noviembre. Las tortugas Golfina llegan a la reserva a depositar sus huevos.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch120" id="id121" checked="checked"/>
+					<label for="id121">
+						<img src="/assets/eventos/desove1.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/desove1.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_ballenas" class="modalContent_2Columns_right">
+				<h4 class="glossy-title dark-blue">Avistamiento de ballenas Yubarta</h4>
+				<p>Julio a Octubre. Avistamiento de los visitantes más esperados de nuestra costa pacífica colombiana. Hermoso espectáculo de la naturaleza.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch140" id="id141" checked="checked"/>
+					<label for="id141">
+						<img src="/assets/eventos/yubarta1.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/yubarta1.jpg" width="540"/>
+					<input type="radio" name="slide_switch140" id="id142"/>
+					<label for="id142">
+						<img src="/assets/eventos/yubarta2.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/yubarta2.jpg" width="540"/>
+					<input type="radio" name="slide_switch140" id="id143"/>
+					<label for="id143">
+						<img src="/assets/eventos/yubarta3.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/yubarta3.jpg" width="540"/>
+				</div>
+			</div>
+			<div id="div_libera" class="modalContent_2Columns_right">
+				<h4 class="glossy-title dark-blue">Liberación de Tortugas Golfina</h4>
+				<p>Enero a Marzo. Luego de aproximadamente 6 meses de incubación, se liberan las crías de tortuga.
+				</p>
+				<div class="slider" style="margin: 0">
+					<input type="radio" name="slide_switch130" id="id131" checked="checked"/>
+					<label for="id131">
+						<img src="/assets/eventos/libera1.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/libera1.jpg" width="540"/>
+					<input type="radio" name="slide_switch130" id="id132"/>
+					<label for="id132">
+						<img src="/assets/eventos/libera2.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/libera2.jpg" width="540"/>
+					<input type="radio" name="slide_switch130" id="id133"/>
+					<label for="id133">
+						<img src="/assets/eventos/libera3.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/libera3.jpg" width="540"/>
+					<input type="radio" name="slide_switch130" id="id134"/>
+					<label for="id134">
+						<img src="/assets/eventos/libera4.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/libera4.jpg" width="540"/>
+					<input type="radio" name="slide_switch130" id="id135"/>
+					<label for="id135">
+						<img src="/assets/eventos/libera5.jpg" width="90"/>
+					</label>
+					<img src="/assets/eventos/libera5.jpg" width="540"/>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+    <script>
+		jQuery(function(){
+			jQuery('#camera_wrap').camera({
+				height: '500px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>

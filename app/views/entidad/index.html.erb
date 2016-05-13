@@ -1,0 +1,639 @@
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.11.3/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/ui/1.11.3/jquery-ui.js"></script>
+<script>
+			$(document).ready(function(){
+				$(".modalTab").hide(1000);
+				
+				$(".button-panel").click(function(){
+					arrNombreCtrl = $(this).attr("id").split("_");
+					
+					if (arrNombreCtrl.length > 2)
+						arrNombreCtrl = arrNombreCtrl[1] + "_" + arrNombreCtrl[2];
+					else
+						arrNombreCtrl = arrNombreCtrl[1];
+					
+					$(".button").removeClass("green");
+					$(".button").addClass("dark-blue");
+					$("#cmd_" + arrNombreCtrl).addClass("green");
+					$(".modalTab").hide(1000);
+					$("#div_" + arrNombreCtrl).show(1000);
+				});
+					
+				$("#cboTipoHabitacion").change(function(){
+					$(".modalTab").hide(1000);
+					$("#div_" + $(this).attr("value")).show(1000);
+					p = $("#sec_reservar").detach();
+					p.appendTo($("#ac_" + $(this).attr("value")));
+					p = null;
+				});					
+				
+				$(".submit").click(function(e){
+					e.preventDefault();
+					$("#TipoHabitacion").val($("#cboTipoHabitacion").val());
+					$("#frmReservar").submit();
+				});
+			});
+		</script>
+<div class="section" style="width:95.7%">		
+	<div class="feature">
+		<div class="camera_wrap camera_charcoal_skin" id="camera_wrap">
+            <div data-thumb="/assets/slideshow/index/thumbs/slide1.jpg" data-src="/assets/slideshow/index/slide1.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Hotel Carolina Del Mar. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+            <div data-thumb="/assets/slideshow/index/thumbs/slide2.jpg" data-src="/assets/slideshow/index/slide2.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Hotel Carolina Del Mar. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+            <div data-thumb="/assets/slideshow/index/thumbs/slide3.jpg" data-src="/assets/slideshow/index/slide3.jpg">
+                <div class="camera_caption fadeFromBottom">
+                	Hotel Carolina Del Mar. Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/index/thumbs/slide4.jpg" data-src="/assets/slideshow/index/slide4.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Cascada de Nabugá (Bahía Solano). Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/index/thumbs/slide5.jpg" data-src="/assets/slideshow/index/slide5.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Salto del aeropuerto (Bahía Solano). Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.                    
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/index/thumbs/slide6.jpg" data-src="/assets/slideshow/index/slide6.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Tebada (Bahía Solano). Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.                    
+                </div>
+            </div>
+			<div data-thumb="/assets/slideshow/index/thumbs/slide7.jpg" data-src="/assets/slideshow/index/slide7.jpg">
+                <div class="camera_caption fadeFromBottom">
+                    Playa Mecana (Bahía Solano). Encuentra más en nuestra <a href="<%= galerias_path %>">Galería de imágenes</a>.                    
+                </div>
+            </div>            
+        </div>
+      </div>
+</div>
+
+<div style="clear:both; height:10px"></div>
+
+<div class="section" style="width:95.7%">
+<h2>Conozca el hotel</h2>
+<!--p>&nbsp;</p-->
+<ul class="ca-menu">
+	<li>
+		<a href="#openModalHabitaciones" id="bpan_doble_superior" class="button-panel">
+			<span class="ca-icon"><img src="/assets/hotel/hab-suiteDeluxe1.jpg" height="150" width="150" style="margin-top:20px"></span>
+			<div class="ca-content">
+				<br><br>
+				<h2 class="ca-main">Habitaciones</h2>
+				<!--h3 class="ca-sub">Todo para tu comodidad</h3-->
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="#openModalRestaurante" id="bpan_restaurante" class="button-panel">
+			<span class="ca-icon"><img src="/assets/hotel/restaurante.jpg" height="150" width="150" style="margin-top:20px"></span>
+			<div class="ca-content">
+				<br><br>
+				<h2 class="ca-main">Restaurante</h2>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="#openModalMas" id="bpan_mostrario_tur" class="button-panel">
+			<span class="ca-icon"><img src="/assets/hotel/mostrario.jpg" height="150" width="150" style="margin-top:20px"></span>
+			<div class="ca-content">
+				<br><br>
+				<h2 class="ca-main">Y más...</h2>
+			</div>
+		</a>
+	</li>
+	<li>
+		<a href="<%= reservas_path %>">
+			<span class="ca-icon"><img src="/assets/hotel/agenda.jpg" height="150" width="150" style="margin-top:20px"></span>
+			<div class="ca-content">
+				<br><br>
+				<h2 class="ca-main">Reserve ahora</h2>
+			</div>
+		</a>
+	</li>
+</ul>
+</div>
+
+<div class="section" style="width:95.7%">
+	<h2>Plan Avistamiento de Ballenas</h2>
+	<div class="subsection">
+	<div class="one-third-big last" style="background-color: none; border-radius: 10px; padding:10px; width:400px;">
+		<p style="color:#000044;">Nunca fue más fácil ser parte del majestuoso espectáculo que ofrecen las ballenas jorobadas al visitar el pacífico colombiano.
+		</p><p>No dejes pasar esta magnífica oportunidad que te ofrece el HOTEL CAROLINA DEL MAR para vivir esta gran experiencia</p>
+		<p>Te ofrecemos el mejor precio !Garantizado! <a href="/entidad/planes">Ver más &raquo;</a>
+		</p>
+	</div>
+	
+	<p style="text-align: right">
+		<a href="/entidad/planes"><img src="/assets/planes/FotorCreated.jpg" width="450"/></a>
+	</p>
+	</div>
+</div>
+
+			<div id="openModalHabitaciones" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<div style="overflow: auto; left:400px; top:20px; position: absolute; z-index: 10; ">
+						<p> Por favor seleccione el tipo de habitación para conocer <br> sus características: 
+						<select id="cboTipoHabitacion">
+							<option value="doble_superior">Doble Superior</option>
+							<option value="doble_estandar">Doble Estándar con ventilador</option>
+							<option value="triple_superior">Triple Superior</option>
+							<option value="triple_estandar">Triple con ventilador</option>
+							<option value="cuadruple_estandar">Cuádruple con ventilador</option>
+							<option value="suite_deluxe">Suite Deluxe con tina de hidromasaje</option>
+						</select>
+						</p>
+					</div>
+					<div id="div_doble_superior" class="modalTab">
+							<div id="1" class="tab_content_info">
+								<div class="side-nav-popup">
+									<h3 class="glossy-title">Habitación<br>Doble Superior</h3>
+										<div class="accordion" id="ac_doble_superior">
+											<section id="item1">
+												<p class="pointer">&#9654;</p>
+												<h1><a href="#">Características</a></h1>
+												<ul>
+													<li><a>Cama Doble.</a></li>
+													<li><a>TV LCD</a></li>
+													<li><a>Internet Wi-Fi.</a></li>
+													<li><a>Escritorio</a></li>
+													<li><a>Baño privado</a></li>
+													<li><a>Aire acondicionado</a></li>
+													<li><a>Cajilla de seguridad</a></li>
+													<li><a>Citófono</a></li>
+													<li><a>Habitaciones insonorizadas</a></li>
+												</ul>
+											</section>
+											<section id="item2" class="ac_hidden">
+												<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+												<h4>Temporada Baja</h4>
+												<p>1 persona:  $ 80.000</p>
+												<p>2 personas: $ 130.000</p>
+												<br>
+												<h4>Temporada Alta</h4>
+												<p>1 persona:  $ 100.000</p>
+												<p>2 personas: $ 150.000</p>
+											</section>
+										 	<section class="ac_hidden" id="sec_reservar">
+    											<p class="pointer">&#9654;</p><h1><a href="#">Reservar</a></h1>
+    											<%= form_tag("/entidad/enviar_reserva", method: :post, id:"frmReservar") do %>
+	    											<%= text_field_tag :Nombre, nil, options= {size:27, maxlength:30, required: :required, placeholder:"Nombres y Apellidos"} %><br>
+	    											<%= text_field_tag :Telefono, nil, options= {size:27, maxlength:50, required: :required, placeholder:"Teléfono fijo o celular"} %><br>
+	    											<%= email_field :Correo, nil, options= {size:27, maxlength:30, required: :required, placeholder:"Correo electrónico"} %><br>
+													<input type="text" id="FechaIngreso" name="FechaIngreso" size="10" maxlength="10" required="required" onfocus="blur()" placeholder="Fecha de ingreso"><br>
+													<input type="text" id="FechaSalida" name="FechaSalida" size="10" maxlength="10" required="required" onfocus="blur()" placeholder="Fecha de salida"><br>
+													<div style="clear: both; height:5px;"></div>
+													&nbsp;Adultos <%= select_tag "Adultos", options_for_select( (1..10).step(1).map{|n| n%1 == 0 ? n.to_i : n} ), title:"12 años o más" %>
+													&nbsp;&nbsp;&nbsp;Niños <%= select_tag "Ninos", options_for_select( (0..5).step(1).map{|n| n%1 == 0 ? n.to_i : n} ), title:"2 a 11 años"%>
+													<%= hidden_field_tag(:TipoHabitacion, nil) %>
+													<p style="text-align: center"><%= button_tag :Enviar, id: "cmdEnviar", class: "submit" %></p>			
+												<% end %>				
+  											</section>
+										</div>
+								</div>
+								<em class="corner"></em>
+							</div>
+							<div class="modalContent_2Columns_right">
+								<div class="slider">
+									<input type="radio" name="slide_switch0" id="id01" checked="checked"/>
+									<label for="id01">
+										<img src="/assets/hotel/hab-dobleSuperior1.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleSuperior1.jpg" title="Habitación Estándar" width="540"/>
+									
+									<input type="radio" name="slide_switch0" id="id02"/>
+									<label for="id02">
+										<img src="/assets/hotel/hab-dobleSuperior2.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleSuperior2.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch0" id="id03"/>
+									<label for="id03">
+										<img src="/assets/hotel/hab-dobleSuperior3.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleSuperior3.jpg" width="540"/>
+									
+								</div>
+								
+							</div>
+					</div>
+					
+					<div id="div_doble_estandar" class="modalTab">
+							<div id="1" class="tab_content_info">
+								<div class="side-nav-popup" id="doble_estandar">
+									<h3 class="glossy-title">Habitación<br>Doble Estandar</h3>
+									<div class="accordion" id="ac_doble_estandar">
+										<section id="item4">
+											<p class="pointer">&#9654;</p>
+											<h1><a href="#">Características</a></h1>
+											<ul>
+												<li><a>Cama Doble.</a></li>
+												<li><a>TV LCD</a></li>
+												<li><a>Internet Wi-Fi.</a></li>
+												<li><a>Escritorio</a></li>
+												<li><a>Baño privado</a></li>
+												<li><a>Ventilador</a></li>
+												<li><a>Cajilla de seguridad</a></li>
+												<li><a>Citófono</a></li>
+												<li><a>Habitaciones insonorizadas</a></li>
+											</ul>
+										</section>
+										<section id="item5" class="ac_hidden">
+											<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+											<h4>Temporada Baja</h4>
+											<p>1 persona:  $ 50.000</p>
+											<p>2 personas: $ 90.000</p>
+											<br>
+											<h4>Temporada Alta</h4>
+											<p>1 persona:  $ 80.000</p>
+											<p>2 personas: $ 120.000</p>
+										</section>
+									</div>
+								</div>
+								<em class="corner"></em>
+							</div>
+							<div class="modalContent_2Columns_right">
+								<div class="slider">
+									<input type="radio" name="slide_switch1" id="id11" checked="checked"/>
+									<label for="id11">
+										<img src="/assets/hotel/hab-dobleEstandar1.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleEstandar1.jpg" title="Habitación Estándar" width="540"/>
+									
+									<input type="radio" name="slide_switch1" id="id12"/>
+									<label for="id12">
+										<img src="/assets/hotel/hab-dobleEstandar2.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleEstandar2.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch1" id="id14"/>
+									<label for="id14">
+										<img src="/assets/hotel/hab-dobleEstandar3.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-dobleEstandar3.jpg" width="540"/>
+								</div>
+								
+							</div>
+					</div>					
+					<div id="div_triple_superior" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Habitación<br>Triple Superior</h3>
+									<div class="accordion" id="ac_triple_superior">
+										<section id="item6">
+											<p class="pointer">&#9654;</p>
+											<h1><a href="#">Características</a></h1>
+											<ul>
+												<li><a>Una cama doble y una sencilla.</a></li>
+												<li><a>TV LCD</a></li>
+												<li><a>Internet Wi-Fi.</a></li>
+												<li><a>Baño privado</a></li>
+												<li><a>Aire acondicionado</a></li>
+												<li><a>Cajilla de seguridad</a></li>
+												<li><a>Citófono</a></li>
+												<li><a>Habitaciones insonorizadas</a></li>
+											</ul>
+										</section>
+										<section id="item7" class="ac_hidden">
+											<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+											<h4>Temporada Baja</h4>
+											<p>1 persona:  $ 70.000</p>
+											<p>2 personas: $ 100.000</p>
+											<p>3 personas: $ 120.000</p>
+											<br>
+											<h4>Temporada Alta</h4>
+											<p>1 persona:  $ 90.000</p>
+											<p>2 personas: $ 120.000</p>
+											<p>2 personas: $ 150.000</p>
+										</section>
+									</div>
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+								<div class="slider">
+									<input type="radio" name="slide_switch2" id="id21" checked="checked"/>
+									<label for="id21">
+										<img src="/assets/hotel/hab-tripleSuperior1.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleSuperior1.jpg" title="Habitación Estándar Twin" width="540"/>
+									<input type="radio" name="slide_switch2" id="id22"/>
+									<label for="id22">
+										<img src="/assets/hotel/hab-tripleSuperior2.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleSuperior2.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch2" id="id23"/>
+									<label for="id23">
+										<img src="/assets/hotel/hab-tripleSuperior3.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleSuperior3.jpg" width="540"/>
+								</div>
+						</div>
+					</div>
+					
+					<div id="div_triple_estandar" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Habitación<br>Triple Estandar</h3>
+									<div class="accordion" id="ac_triple_estandar">
+										<section id="item7">
+											<p class="pointer">&#9654;</p>
+											<h1><a href="#">Características</a></h1>
+											<ul>
+												<li><a>Una cama doble y una sencilla.</a></li>
+												<li><a>TV LCD</a></li>
+												<li><a>Internet Wi-Fi.</a></li>
+												<li><a>Baño privado</a></li>
+												<li><a>Ventilador</a></li>
+												<li><a>Cajilla de seguridad</a></li>
+												<li><a>Citófono</a></li>
+												<li><a>Habitaciones insonorizadas</a></li>
+											</ul>
+										</section>
+										<section id="item8" class="ac_hidden">
+											<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+											<h4>Temporada Baja</h4>
+											<p>1 persona:  $ 90.000</p>
+											<p>2 personas: $ 90.000</p>
+											<p>3 personas: $ 120.000</p>
+											<br>
+											<h4>Temporada Alta</h4>
+											<p>1 persona:  $ 110.000</p>
+											<p>2 personas: $ 110.000</p>
+											<p>3 personas: $ 140.000</p>
+										</section>
+									</div>
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+								<div class="slider">
+									<input type="radio" name="slide_switch3" id="id31" checked="checked"/>
+									<label for="id31">
+										<img src="/assets/hotel/hab-tripleEstandar1.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleEstandar1.jpg" title="Habitación Estándar Twin" width="540"/>
+									<input type="radio" name="slide_switch3" id="id32"/>
+									<label for="id32">
+										<img src="/assets/hotel/hab-tripleEstandar2.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleEstandar2.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch3" id="id33"/>
+									<label for="id33">
+										<img src="/assets/hotel/hab-tripleEstandar3.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-tripleEstandar3.jpg" width="540"/>
+								</div>
+						</div>
+					</div>
+					
+					<div id="div_cuadruple_estandar" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Habitación<br>Cuádruple Estandar</h3>
+									<div class="accordion" id="ac_cuadruple_estandar">
+										<section id="item9">
+											<p class="pointer">&#9654;</p>
+											<h1><a href="#">Características</a></h1>
+											<ul>
+												<li><a>Una cama doble y una sencilla.</a></li>
+												<li><a>TV LCD</a></li>
+												<li><a>Internet Wi-Fi.</a></li>
+												<li><a>Baño privado</a></li>
+												<li><a>Ventilador</a></li>
+												<li><a>Cajilla de seguridad</a></li>
+												<li><a>Citófono</a></li>
+												<li><a>Habitaciones insonorizadas</a></li>
+											</ul>
+										</section>
+										<section id="item10" class="ac_hidden">
+											<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+											<h4>Temporada Baja</h4>
+											<p>1 persona:  $ 50.000</p>
+											<p>2 personas: $ 80.000</p>
+											<p>3 personas: $ 100.000</p>
+											<p>4 personas: $ 160.000</p>
+											<br>
+											<h4>Temporada Alta</h4>
+											<p>1 persona:  $ 110.000</p>
+											<p>2 personas: $ 140.000</p>
+											<p>3 personas: $ 170.000</p>
+											<p>4 personas: $ 200.000</p>
+										</section>
+									</div>
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+							<div class="slider">
+								<input type="radio" name="slide_switch4" id="id41" checked="checked"/>
+								<label for="id41">
+									<img src="/assets/hotel/hab-cuadrupleEstandar1.jpg" width="90"/>
+								</label>
+								<img src="/assets/hotel/hab-cuadrupleEstandar1.jpg" title="Habitación Cuádruple Estándar" width="540"/>
+								<input type="radio" name="slide_switch4" id="id42"/>
+								<label for="id42">
+									<img src="/assets/hotel/hab-cuadrupleEstandar2.jpg" width="90"/>
+								</label>
+								<img src="/assets/hotel/hab-cuadrupleEstandar2.jpg" width="540"/>
+							</div>
+						</div>
+						<em class="corner"></em>
+					</div>					
+					
+					<div id="div_suite_deluxe" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Suite Deluxe</h3>
+									<div class="accordion" id="ac_suite_deluxe">
+										<section id="item11">
+											<p class="pointer">&#9654;</p>
+											<h1><a href="#">Características</a></h1>
+											<ul>
+												<li><a>Cama Doble.</a></li>
+												<li><a>Baño privado (tina con hidromasaje)</a> </li>
+												<li><a>Minibar (con costo adicional)</a></li>
+												<li><a>TV LCD</a></li>
+												<li><a>Internet Wi-Fi.</a></li>
+												<li><a>Escritorio para lectura o estudio.</a></li>
+												<li><a>Aire acondicionado</a></li>
+												<li><a>Secador de pelo. 110W</a></li>
+												<li><a>Cajilla de seguridad</a></li>
+												<li><a>Citófono</a></li>
+												<li><a>Llamadas gratis (local y nacional)</a></li>
+												<li><a>Habitaciones completamente insonorizadas</a></li>
+											</ul>
+										</section>
+										<section id="item12" class="ac_hidden">
+											<p class="pointer">&#9654;</p><h1><a href="#">Tarifas</a></h1>
+											<h4>Temporada Baja</h4>
+											<p>1 persona:  $ 100.000</p>
+											<p>2 personas: $ 150.000</p>
+											<br>
+											<h4>Temporada Alta</h4>
+											<p>1 persona:  $ 130.000</p>
+											<p>2 personas: $ 180.000</p>
+										</section>
+									</div>									
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+								<div class="slider">
+									<input type="radio" name="slide_switch5" id="id51" checked="checked"/>
+									<label for="id51">
+										<img src="/assets/hotel/hab-suiteDeluxe1.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-suiteDeluxe1.jpg" width="540"/>
+
+									<input type="radio" name="slide_switch5" id="id52"/>
+									<label for="id52">
+										<img src="/assets/hotel/hab-suiteDeluxe2.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-suiteDeluxe2.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch5" id="id53"/>
+									<label for="id53">
+										<img src="/assets/hotel/hab-suiteDeluxe3.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-suiteDeluxe3.jpg" width="540"/>
+									
+									<input type="radio" name="slide_switch5" id="id54"/>
+									<label for="id54">
+										<img src="/assets/hotel/hab-suiteDeluxe4.jpg" width="90"/>
+									</label>
+									<img src="/assets/hotel/hab-suiteDeluxe4.jpg" width="540"/>
+									
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- HABITACIONES -->
+
+			<div id="openModalRestaurante" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<div style="overflow: auto; right:30px; top:20px; position: absolute; z-index: 10; ">
+						<input type="button" class="button green" value="Restaurante" id="cmd_restaurante" style="float:right">
+					</div>
+					<div id="div_restaurante" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Restaurante</h3>
+								<ul>
+									<li><a>Nuestro restaurante ofrece platos característicos de la gastronomía del pacífico colombiano y 
+										los más variados y exquisitos sabores de la cocina chocoana (desayunos, almuerzos, cenas, refrigerios).
+										<br>
+										</a> 
+									</li>
+									<li><a>Cubrimos eventos sociales, banquetes, cumpleaños, etc. </a></li>
+								</ul>
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+							<div class="slider">
+							<input type="radio" name="slide_switch8" id="id81" checked="checked"/>
+							<label for="id81">
+								<img src="/assets/hotel/restaurante.jpg" width="90"/>
+							</label>
+							<img src="/assets/hotel/restaurante.jpg" width="540" height="320">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="openModalMas" class="modalDialog">
+				<div>
+					<a href="#close" title="Close" class="close">X</a>
+					<div style="overflow: auto; right:30px; top:20px; position: absolute; z-index: 10; ">
+					<input type="button" value="Mostrario Turístico" id="cmd_mostrario_tur" class="button square blue">
+					</div>
+					<div id="div_mostrario_tur" class="modalTab">
+						<div class="tab_content_info">
+							<div class="side-nav-popup">
+								<h3 class="glossy-title">Mostrario Turístico</h3>
+							<ul>
+								<li>Adquiere en nuestro mostrario los mejores recuerdos de tus vacaciones.</li>
+							</ul>
+							</div>
+							<em class="corner"></em>
+						</div>
+						<div class="modalContent_2Columns_right">
+							<div class="slider"
+							<input type="radio" name="slide_switch9" id="id91" checked="checked"/>
+							<label for="id91">
+								<img src="/assets/hotel/mostrario.jpg" width="90"/>
+							</label>
+							<img src="/assets/hotel/mostrario.jpg" width="540" height="320">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!-- BAR -->
+
+    <script>
+		$(function(){
+			$('#camera_wrap').camera({
+				height: '500px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+			
+  			$(".accordion section h1").click(function(e) {
+    			$(this).parents().siblings("section").addClass("ac_hidden");
+    			$(this).parents("section").removeClass("ac_hidden");
+    			e.preventDefault();
+  			});		
+  			
+			varMonthNames = ['ENERO', 'FEBRERO', 'MARZO', 'ABRIL', 'MAYO', 'JUNIO', 'JULIO', 'AGOSTO', 'SEPTIEMBRE', 'OCTUBRE', 'NOVIEMBRE', 'DICIEMBRE'];
+		  	varDayNamesShort = ['Dom','Lun','Mar','Mié','Juv','Vie','Sáb'];
+		  	varDayNamesMin = ['Do','Lu','Ma','Mi','Ju','Vi','Sá'];
+		  	
+		    $( "#FechaIngreso" ).datepicker({
+		    	minDate:+0,
+		    	maxDate:"+1Y",
+		    	dateFormat:"dd/mm/yy",
+		    	monthNames: varMonthNames, 
+		    	dayNamesShort: varDayNamesShort,
+		    	dayNamesMin: varDayNamesMin,
+		      	numberOfMonths: 3,
+		      	showButtonPanel: true
+		    });
+		    
+		    $( "#FechaSalida" ).datepicker({
+		    	minDate:+0,
+		    	maxDate:"+1Y",
+		    	dateFormat:"dd/mm/yy",
+		    	monthNames: varMonthNames, 
+		    	dayNamesShort: varDayNamesShort,
+		    	dayNamesMin: varDayNamesMin,
+		      	numberOfMonths: 3,
+		      	showButtonPanel: true
+		    });  				
+		});
+	</script>
+        
+    <style>
+ 		.ui-datepicker td {
+			font-size: 1.2em;
+		}
+ 	</style>
+    
+	<script src="http://thecodeplayer.com/uploads/js/prefixfree.js" type="text/javascript"></script>

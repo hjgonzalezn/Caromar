@@ -1,0 +1,9 @@
+!SESSION 2014-12-18 03:55:59.319 -----------------------------------------------
+eclipse.buildId=3.6.1.201410201044
+java.version=1.7.0_71
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=es_CO
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY com.aptana.git.core 4 0 2014-12-18 03:59:34.620
+!MESSAGE (Build 3.6.1.201410201044) [ERROR]  Errors occurred while grabbing changed file listings

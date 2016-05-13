@@ -1,0 +1,117 @@
+		<style>
+			#map_canvas{
+				display: block;
+				height: 320px;
+				width: 97%;
+				margin-top: -20px;	
+				border: 10px solid #AAAAAA;	
+				-webkit-box-shadow: 2px 2px 5px rgba(36, 43, 199,.8);
+				-moz-box-shadow: 2px 2px 5px rgba(36, 43, 199,.8);
+				-o-box-shadow: 2px 2px 5px rgba(36, 43, 199,.8);
+				box-shadow: 2px 2px 5px rgba(36, 43, 199,.8);
+			}
+		</style>
+		
+				<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyBV9S_nYRbbZkQRSXWClYvJkhfIiehn6Ng&sensor=FALSE" /></script>
+				<script type="text/javascript">
+					function createInfoWindowContent(map) {
+						var BhSolano = new google.maps.LatLng(6.24483653, -77.40624165);
+						
+					  var numTiles = 1 << map.getZoom();
+					  var projection = new MercatorProjection();
+					  var worldCoordinate = projection.fromLatLngToPoint(BhSolano);
+					  var pixelCoordinate = new google.maps.Point(
+						  worldCoordinate.x * numTiles,
+						  worldCoordinate.y * numTiles);
+					  var tileCoordinate = new google.maps.Point(
+						  Math.floor(pixelCoordinate.x / TILE_SIZE),
+						  Math.floor(pixelCoordinate.y / TILE_SIZE));
+
+					  return [
+						'Chicago, IL',
+						'LatLng: ' + BhSolano.lat() + ' , ' + BhSolano.lng(),
+						'World Coordinate: ' + worldCoordinate.x + ' , ' +
+						  worldCoordinate.y,
+						'Pixel Coordinate: ' + Math.floor(pixelCoordinate.x) + ' , ' +
+						  Math.floor(pixelCoordinate.y),
+						'Tile Coordinate: ' + tileCoordinate.x + ' , ' +
+						  tileCoordinate.y + ' at Zoom Level: ' + map.getZoom()
+					  ].join('<br>');
+					}
+
+					function initialize() {
+						var Centro = new google.maps.LatLng(6.32127889, -76.56853414);
+						var BhSolano = new google.maps.LatLng(6.24483653, -77.40624165);
+						var myOptions = {
+						  zoom: 9,
+						  center: Centro,
+						  mapTypeId: google.maps.MapTypeId.ROADMAP
+						};
+						var map = new google.maps.Map(document.getElementById("map_canvas"),
+							myOptions);
+	
+						 var coordInfoWindow = new google.maps.InfoWindow();
+						  coordInfoWindow.setContent("<center><img src='/assets/iconos/mapMark.png'></center>" +  
+													 "Bahía Solano (Chocó - Colombia). " + "<br> " + 
+													 "Barrio El Carmen" + "<br> " + 
+													 "Carrera 1 entre calles 3 y 4" + "<br> ");
+						  coordInfoWindow.setPosition(BhSolano);
+						  coordInfoWindow.open(map);
+					}
+				</script>
+
+				
+<div class="section" style="width:95.7%; overflow:hidden;">
+		<h1>Cont&aacute;ctenos</h1><br>
+		<br>
+	
+		<% if !notice.nil? %>
+			<div class="success">
+				<h4>Solicitud enviada exitosamente</h4>
+				<p><%= notice %></p>
+			</div>
+		<% end %>
+		
+		<div class="info">
+			<p>Los campos marcados con asterisco (*) son requeridos, por lo tanto, deben ser diligenciados.</p>
+		</div>
+		<div class="one" style="background-color: #e2f1fd; padding: 10px; border-radius: 5px;">
+				
+			<div class="one-half">
+				<%= form_tag("enviar_solicitud_contacto", method: :post) do %>
+					<%= label_tag :Nombre, "Nombres y Apellidos*" %><br>
+					<%= text_field_tag :Nombre, nil, options= {size:45, maxlength:40, required: :required, autofocus: :autofocus} %><br>
+					<%= label_tag :Correo, "Correo electrónico*"%><br>
+					<%= email_field :Correo, nil, options= {size:45, maxlength:50, required: :required} %><br>
+					<%= label_tag :Telefono, "Teléfono fijo o Celular*" %><br>
+					<%= text_field_tag :Telefono, nil, options= {size:45, maxlength:50, required: :required} %><br>
+					<%= label_tag :TipoMensaje, "Tipo de mensaje*" %><br>
+					<%= select_tag(:TipoMensaje, options_for_select([['---- Seleccione ----', ''],['Comentario', 'Comentario'],['Felicitacion', 'Felicitacion'],['Solicitud', 'Solicitud'], ['Queja o Reclamo', 'Queja']], ''), options={required: :required}) %>
+					<br><br>
+					<%= label_tag :Mensaje, "Mensaje*" %><br>
+					<%= text_area_tag(:Mensaje, "", size: "55x8") %><br><br>
+					<%= submit_tag :Aceptar, class:"button dark-blue" %>
+				<% end %> 
+			</div>
+			<div class="one-half last" style="box-shadow: inset 0 0 7px 0px #1772b5; background-color: white; padding:10px; border-radius: 5px; margin:23px auto;">
+				<ul class="address-block">
+					<li style="list-style-position:inside; list-style-image: url(/assets/iconos/icon-address.png)">Bahía Solano (Chocó, Colombia).<br>
+						&nbsp;Barrio El Carmen<br>
+						&nbsp;Carrera 1 entre calles 3 y 4
+					</li>
+					<li style="list-style-position:inside; list-style-image: url(/assets/iconos/icon-mobile.png)">+57 (313) 728 7687<br></li>
+					<li style="list-style-position:inside; list-style-image: url(/assets/iconos/icon-mobile.png)">+57 (311) 397 4930<br></li>
+				   	<li style="list-style-position:inside; list-style-image: url(/assets/iconos/icon-email.png)"><strong>info@hotelcarolinadelmar.com.co</strong></li>
+				</ul>
+				<br>
+				<img src="/assets/hotel/recept1.jpg" width="400" height="300" style="border:10px white solid;">
+			</div>
+		</div>			
+		<div style="clear:both; height:40px;"></div>
+					
+		<h2 style="border-radius: 10px;" >Dónde encontrarnos</h2>
+		<div id="map_canvas"></div>
+		
+		<div style="clear:both"></div>
+		<script>initialize();</script>
+</div>	
