@@ -149,7 +149,7 @@ div.button-row {
 
 .modalDialog {
 	position: fixed;
-	top:0;
+	top:500;
 	right: 0;
 	bottom: 0;
 	left: 0;

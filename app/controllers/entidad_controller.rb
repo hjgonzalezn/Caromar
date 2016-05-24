@@ -67,4 +67,12 @@ class EntidadController < ApplicationController
 
   def bahia
   end
+  
+  def avistamiento
+  end
+  
+  def vacaciones
+    
+  end
+  
 end

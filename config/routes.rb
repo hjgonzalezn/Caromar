@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   root 'entidad#index'
   get 'entidad/index' => 'entidad#index', as: :index
   get 'entidad/somos' => 'entidad#somos', as: :somos
-  get 'entidad/planes' => 'entidad#planes', as: :planes
+  get 'entidad/avistamiento' => 'entidad#avistamiento', as: :avistamiento
+  get 'entidad/vacaciones' => 'entidad#vacaciones', as: :vacaciones
   post 'entidad/enviar_reserva' => 'entidad#enviar_reserva', as: :enviar_reserva
   post 'entidad/enviar_solicitud_contacto' => 'entidad#enviar_solicitud_contacto', as: :solicitud_contacto
   get 'entidad/reservas' => 'entidad#reservas', as: :reservas

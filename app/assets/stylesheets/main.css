@@ -223,6 +223,80 @@ table tr:last-child td:last-child {
     padding: 10px 28px;
 }
 
+.plan-header, .plan-footer{
+	background-color:#e2f1fd;
+}
+
+.plan-header > h3{
+	font-size:26px;
+	text-align:center;
+	width:100%;
+	box-shadow:none;
+	margin:0 auto;
+	color:#ff8000;
+}
+.plan-header > p, .plan-footer > p{
+	text-align:center;
+	font-size:23px;
+	color:#0078A5;
+	line-height: 12px;
+}
+
+.plan-content {
+	background-color:none;
+	padding:0;
+	height:267px;
+}
+
+.plan-content img {
+	width:400px;
+	height:267px;
+}
+
+.plan-footer{
+	padding-bottom:15px;
+}
+
+.plan-footer p:first-child{
+	color:#000;
+}
+
+.plan-footer p:last-child{
+	color:#ff8000;
+	text-shadow: 1px 1px 0 #000;
+}
+
+div.boton{
+	margin:-90px 35%;
+}
+.panel{
+	padding:10px;
+	background:#e2f1fd;
+}
+
+.panel ul li{
+	font-size:1rem;
+}
+
+.form{
+	width:70%;
+	margin: 20px auto;
+}
+
+.tm-banner-link {
+	background: rgba(252, 221, 68, 0.5) none repeat scroll 0% 0%;
+	border: 1px solid #D2B731;
+	color: #FFF;
+	font-weight: 600;
+	display: inline-block;
+	padding: 10px 25px;
+	transition: all 0.3s ease;
+}
+.tm-banner-link:hover,
+.tm-banner-link:focus {
+	background: rgba(252, 221, 68, 1);
+	color: #000;
+}
 
 .subsection{
 	background-color: #e2f1fd; padding: 5px;border: 1px #CCC solid; overflow: auto; border-radius: 10px 10px 10px 10px;
@@ -242,9 +316,14 @@ table tr:last-child td:last-child {
     border: 3px solid white;
 }
 
-.subsection p{
-    font-size: 22px;
+.submit{
+	padding: 10px 20px;
+	cursor:hand;
 }
+
+/*.subsection p{
+    font-size: 22px;
+}*/
 
 .section h2:after{
 	/*content:"\000A";*/
