@@ -224,33 +224,48 @@ table tr:last-child td:last-child {
 }
 
 .plan-header, .plan-footer{
-	background-color:#e2f1fd;
+	background-color:rgba(0,0,0,0.8);
 }
 
-.plan-header > h3{
-	font-size:26px;
+.plan-content h3{
+	font-size:30px;
 	text-align:center;
 	width:100%;
 	box-shadow:none;
-	margin:0 auto;
-	color:#ff8000;
+	background-image:none;
+	background-color:#FFC90E;
+	margin:0 auto 15px;
+	color:#db2609;
 }
+
+.plan-content h4{
+	text-align:center;
+	color:#00cd00;
+	font-size:25px;
+}
+
+.plan-content p{
+	color:white;
+}
+
 .plan-header > p, .plan-footer > p{
 	text-align:center;
 	font-size:23px;
-	color:#0078A5;
+	color:#379c5e;
 	line-height: 12px;
 }
 
 .plan-content {
 	background-color:none;
 	padding:0;
-	height:267px;
+	height:350px;
+	padding:10px;
+	background-color:rgba(0,0,0,0.8);
 }
 
 .plan-content img {
-	width:400px;
-	height:267px;
+	width:90%;
+	height:350px;
 }
 
 .plan-footer{
@@ -262,13 +277,15 @@ table tr:last-child td:last-child {
 }
 
 .plan-footer p:last-child{
-	color:#ff8000;
+	color:#e8280a;
 	text-shadow: 1px 1px 0 #000;
 }
 
 div.boton{
-	margin:-90px 35%;
+	margin:-0px 30%;
+	float:right;
 }
+
 .panel{
 	padding:10px;
 	background:#e2f1fd;
@@ -874,7 +891,7 @@ a.nivo-prevNav {background:url(img/slide-next-prev.png) left no-repeat;left:5px;
 	width:430px;
 }
 .two-third {
-	width:590px;
+	width:540px;
 }
 .one-third  {
 	width:300px;

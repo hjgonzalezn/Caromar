@@ -125,7 +125,7 @@
 <div class="section" style="width:95.7%">
 	<h2>Nuestros planes</h2>
 	<div style="margin: 0 auto;">
-		<div class="one-half" style="width:400px;">
+		<!--div class="one-half" style="width:400px;">
 			<div class="plan-header">
 				<h3>Avistamiento de Ballenas</h3>
 				<p style="text-align:center">Bahía Solano</p>
@@ -136,23 +136,23 @@
 			</div>
 			<div class="plan-footer">
 				<br>
-				<p>Desde $ 980.000</p>
+				<p>Desde $ 1.080.000</p>
 				<p>Junio a Septiembre de 2016</p>
 			</div>
-		</div>
-		<div class="one-half" style="width:400px;">
-			<div class="plan-header">
-				<h3>Vacaciones en Playa</h3>
-				<p style="text-align:center">Bahía Solano</p>
-			</div>
+		</div-->
+		<div class="one">
 			<div class="plan-content">
-				<img src="/assets/planes/nabuga4.jpg"/>
-				<div class="boton"><a href="<%= vacaciones_path %>" class="tm-banner-link">Leer Más</a></div>
-			</div>
-			<div class="plan-footer">
-				<br>
-				<p>Desde $ 950.000</p>
-				<p>Junio a Diciembre de 2016</p>
+				<div class="two-third">
+					<img src="/assets/planes/nabuga4.png"/>
+				</div>
+				<div class="one-third">
+					<h3>Descanso, sol y playa</h3>
+					<p>Las vacaciones de fin de año son perfectas para que tú y los tuyos vivan experiencias únicas, te invitamos a visitar el Pacífico colombiano y disfrutar su naturaleza exuberante y sus playas. </p>
+					<br>
+					<h4>Desde COP $ 1.200.000</h4>
+					<br>
+					<div class="boton"><a href="<%= vacaciones_path %>" class="tm-banner-link">Leer Más</a></div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -649,7 +649,18 @@
 		    });  				
 		});
 	</script>
-        
+	
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	
+	  ga('create', 'UA-83732778-1', 'auto');
+	  ga('send', 'pageview');
+	
+	</script>
+	
     <style>
  		.ui-datepicker td {
 			font-size: 1.2em;
